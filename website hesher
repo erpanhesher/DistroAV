@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Erpan Hesher – Electronic Musician & Sound Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official website of Erpan Hesher – Uyghur electronic musician, sound artist and composer based in France. AV performances, cine-concerts, soundtracks and interdisciplinary projects.">
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0c0f16;
+      --accent: #f4c66b;
+      --accent-soft: rgba(244,198,107,0.12);
+      --text: #f5f5f5;
+      --muted: #a6a7b0;
+      --border: #232531;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #111525 0, #05060a 55%);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      width: 100%;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(5,6,10,0.9), rgba(5,6,10,0.6));
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.8rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    nav a {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-left: 1.5rem;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 26rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .hero-body {
+      margin-top: 1.2rem;
+      font-size: 0.98rem;
+      color: #e3e3ea;
+      max-width: 34rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.4rem;
+    }
+
+    .tag {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
+      color: var(--muted);
+      background: rgba(10,12,18,0.8);
+    }
+
+    .hero-right {
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, rgba(244,198,107,0.14), transparent 55%),
+                  linear-gradient(135deg, #090b12, #05060a);
+      padding: 1.4rem 1.4rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .panel-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .panel-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .panel-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background: rgba(5,6,10,0.9);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+
+    h2.section-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .body-text {
+      font-size: 0.95rem;
+      color: #e0e1ea;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .card {
+      border-radius: 1.1rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1.1rem 1.1rem;
+      background: linear-gradient(145deg, rgba(12,14,20,0.98), rgba(5,6,10,0.96));
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card small {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      color: #d7d8e1;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #d9dae4;
+    }
+
+    .list li {
+      margin-bottom: 0.45rem;
+    }
+
+    .list strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.8rem 1.25rem 2.2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    @media (max-width: 880px) {
+      nav {
+        display: none;
+      }
+      .hero, .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-right {
+        order: -1;
+      }
+      main {
+        padding-top: 1.4rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-title {
+        font-size: 1.9rem;
+      }
+      .hero-subtitle {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="logo">ERPAN HESHER</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Live & Projects</a>
+      <a href="#films">Film & Sound</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-title">Uyghur Electronic Musician &amp; Sound Artist</div>
+      <div class="hero-subtitle">Immersive sound · AV performance · exile &amp; memory</div>
+      <p class-name="hero-body" class="hero-body">
+        Erpan Hesher is an Uyghur electronic musician, sound artist and composer based in France.
+        Working with modular synthesis, immersive sound design and interdisciplinary collaborations,
+        he creates performances, cine-concerts and soundtracks that explore exile, identity,
+        architecture and the emotional resonance of space.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Modular &amp; live electronics</span>
+        <span class="tag">Cine-concerts</span>
+        <span class="tag">AV &amp; installation</span>
+        <span class="tag">Heritage &amp; archives</span>
+      </div>
+    </div>
+    <aside class="hero-right">
+      <div>
+        <div class="panel-label">Current Focus</div>
+        <div class="panel-title">First Album &amp; AV Show (from RELAX MAX)</div>
+        <p class="panel-text">
+          In development with Les Dominicains de Haute-Alsace (Artist Associate, extended to 2027):
+          transforming the immersive project <em>Relax Max</em> into a narrative album and a touring
+          AV concert, mixing modular synthesis with string quartet and piano.
+        </p>
+      </div>
+      <div>
+        <div class="panel-label">Selected links</div>
+        <div class="panel-links">
+          <a class="btn primary" href="https://beacons.ai/erpan" target="_blank" rel="noreferrer">Portfolio / Links</a>
+          <a class="btn" href="https://soundcloud.com/erpan-hesher" target="_blank" rel="noreferrer">SoundCloud</a>
+          <a class="btn" href="https://www.youtube.com/@erpanhesher" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+      </div>
+      <div>
+        <div class="panel-label">Residency</div>
+        <div class="panel-title">Artist Associate – Les Dominicains de Haute-Alsace</div>
+        <p class="panel-text">
+          Long-term collaboration around immersive sound, heritage and hybrid performance,
+          extended until the 2027 season.
+        </p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About</h2>
+    <div class="two-col">
+      <div class="body-text">
+        <p>
+          Born in Keriye (Uyghur region) in 1992, Erpan Hesher formed his first music ensemble in Beijing in 2008
+          and quickly became their producer. Between 2009 and 2013 he played a key role in the first underground
+          electronic scene in Urumchi – a movement that turned the city into one of the most vibrant hubs for real
+          underground electronic music in China.
+        </p>
+        <p>
+          In the following years he co-founded the independent collective <strong>Rock Family</strong> in Shanghai,
+          organised more than a hundred events (including the ART MIX Festival), and launched the electronic duo
+          <strong>NONE SOUNDS</strong>, bringing contemporary Uyghur music to international stages.
+        </p>
+        <p>
+          After studying sound design and modular synthesis in Tokyo (MI Tokyo) from 2016 to 2018, he relocated to
+          Europe, first in Serbia then in France, where he now lives in artistic exile. His work has expanded into
+          electronic performance, sound art and music production, collaborating with choreographers, film-makers,
+          writers, cultural institutions and heritage sites.
+        </p>
+        <p>
+          Today, as an Artist Associate at Les Dominicains de Haute-Alsace and a NORA laureate within the ACCR
+          network, he develops projects that intertwine modular sound, archives, cinema, architecture and
+          narratives of displacement.
+        </p>
+      </div>
+      <div class="body-text muted">
+        <p><strong>Based in:</strong> France (working internationally)</p>
+        <p><strong>Background:</strong> Uyghur artist in exile, electronic musician, sound artist, composer</p>
+        <p><strong>Practice:</strong> live modular sets, immersive sound, cine-concerts, AV performances, film &amp; theatre scores</p>
+        <p><strong>Languages:</strong> English, French, Uyghur, Chinese</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / LIVE -->
+  <section id="projects">
+    <h2 class="section-title">Live &amp; Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <small>Ciné-concert</small>
+        <h3>Nosferatu (Murnau, 1922) – Live score</h3>
+        <p>
+          88-minute original electronic score for Murnau’s silent classic, performed live with modular synthesis.
+          Presented at Les Dominicains de Haute-Alsace, with multiple dates scheduled (including student and public
+          performances) and interest from other cultural centres and cinemas.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Modular live</span>
+          <span class="pill">Silent cinema</span>
+          <span class="pill">Tour-ready</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <small>Immersive concert &amp; orchestral collaboration</small>
+        <h3>Novembre dans l’Âme</h3>
+        <p>
+          A meditative concert in memory of war victims, created with the Conservatoire de Colmar and Les Dominicains.
+          Erpan composed the immersive electronic sound design, transitions and atmospheres around works by Ravel,
+          Barraine, Gossec, Pärt and Mozart for performances at Les Dominicains and the Comédie de Colmar.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Orchestra + electronics</span>
+          <span class="pill">Immersive sound</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <small>Ambient / AV</small>
+        <h3>Relax Max – towards album &amp; AV tour</h3>
+        <p>
+          An immersive audiovisual project originally created at Les Dominicains, now becoming the core of Erpan’s
+          first album and a touring AV concert. The music, built as a narrative soundtrack, will be reworked with
+          live strings and piano, and adapted visually in collaboration with Jérôme Jean.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Album in development</span>
+          <span class="pill">AV performance</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <small>Heritage &amp; site-specific</small>
+        <h3>Ballersdorf – Orion et le Scorpion</h3>
+        <p>
+          Original soundtrack for a historical and regional project about the youth of Ballersdorf during World War II,
+          soon to be presented at the Strasbourg Planetarium. A meditation on memory, testimony and rural history.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Heritage</span>
+          <span class="pill">Narrative sound</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <small>Installation</small>
+        <h3>Les Deux Merveilles &amp; Résonances Célestes</h3>
+        <p>
+          Long-form sound compositions for audiovisual and architectural installations at Les Dominicains,
+          exploring celestial themes, light and the resonance of the site through ambient and experimental electronics.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Site-specific</span>
+          <span class="pill">Installation</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <small>Multidisciplinary performance</small>
+        <h3>Cauchemar / Qoshmaq (in creation)</h3>
+        <p>
+          A multidisciplinary project blending electronic music, Uyghur tradition, theatre, poetry and visual scenography.
+          Developed with ACCR (NORA), INA and SOAS University of London, it reflects on dreams, exile and collective memory.
+        </p>
+        <div class="pill-row">
+          <span class="pill">NORA / ACCR</span>
+          <span class="pill">Hybrid performance</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FILMS & SOUNDTRACKS -->
+  <section id="films">
+    <h2 class="section-title">Film, Documentary &amp; Soundtracks</h2>
+    <div class="two-col">
+      <div>
+        <ul class="list">
+          <li>
+            <strong>ERPAN</strong> – Documentary in development, directed by Martin Arnaldo, supported by SACEM.
+            Follows Erpan’s journey as an Uyghur electronic artist in exile, building a new artistic life across
+            China, Japan, Serbia and France.
+          </li>
+          <li>
+            <strong>Inquiry of Shadows</strong> – Original soundtrack for a Canadian documentary by Rayah R. Ali,
+            exploring psychological landscapes, memory and vulnerability.
+          </li>
+          <li>
+            <strong>Blue Sweater with a Yellow Hole</strong> – Soundtrack and sound design collaboration for a poetic
+            animated film produced by Maur Film (Czech Republic).
+          </li>
+          <li>
+            <strong>MIRA – Cinémathèque de Strasbourg</strong> – Five original soundtracks for short amateur films from
+            regional archives, presented at Cinéma Le Cosmos, Strasbourg.
+          </li>
+        </ul>
+      </div>
+      <div class="body-text muted">
+        <p>
+          Erpan’s work for film moves between intimate electro-acoustic textures, modular atmospheres and narrative
+          motif writing. He often collaborates closely with directors and institutions, connecting sound with archives,
+          memory and identity.
+        </p>
+        <p>
+          He is open to new collaborations with film-makers, documentarists, animators and visual artists, as well as
+          live re-interpretations of his soundtracks in performance and cine-concert formats.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact &amp; Booking</h2>
+    <div class="two-col">
+      <div class="body-text">
+        <p>
+          For booking, residencies, AV performances, cine-concerts, soundtracks or interdisciplinary collaborations,
+          you can reach out directly by email:
+        </p>
+        <p><strong>Email:</strong> <a href="mailto:erpanhesher@gmail.com">erpanhesher@gmail.com</a></p>
+        <p>
+          Erpan is particularly interested in:
+        </p>
+        <ul class="list">
+          <li>AV performances and cine-concerts in museums, CCRs, theatres and festivals</li>
+          <li>Residencies around sound, exile, memory and architecture</li>
+          <li>Collaborations with orchestras, ensembles, choirs and actors</li>
+          <li>Original soundtracks for films, documentaries and animation</li>
+        </ul>
+      </div>
+      <div class="body-text muted">
+        <p>
+          Full portfolio &amp; updated links:
+          <br><a href="https://beacons.ai/erpan" target="_blank" rel="noreferrer">https://beacons.ai/erpan</a>
+        </p>
+        <p>
+          Socials:
+          <br><a href="https://soundcloud.com/erpan-hesher" target="_blank" rel="noreferrer">SoundCloud</a> ·
+          <a href="https://www.youtube.com/@erpanhesher" target="_blank" rel="noreferrer">YouTube</a>
+        </p>
+        <p>
+          On request:
+          <br>EPK, tech rider, project sheets (Nosferatu, Relax Max, Cauchemar / Qoshmaq, etc.).
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Erpan Hesher. All rights reserved.</div>
+  <div>Site drafted with the help of AI &amp; hand-edited by the artist.</div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
